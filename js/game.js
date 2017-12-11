@@ -38,7 +38,6 @@ Game.prototype.renderBoard = function(){
 
 var insertRandom = function(updatedBoard){
   var boardArray = updatedBoard[0].concat(updatedBoard[1],updatedBoard[2],updatedBoard[3]);
-  // debugger;
   var inserted = false;
   while ( inserted === false ){
     var randomIndex = Math.floor((Math.random() * 15) + 0);
@@ -137,7 +136,6 @@ var randomBoard = function(){
         a[i] = a[j];
         a[j] = tmp;
     }
-    debugger;
     return a;
 };
 
