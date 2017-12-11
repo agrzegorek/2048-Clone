@@ -1,17 +1,7 @@
-var Game = function(board_string){
-  this.board_string = board_string || randomBoard();
-  this.renderBoard();
+var Game = function(){
+  this.board_string = randomBoard();
+  // this.renderBoard();
 };
-
-Game.prototype.toString = function(){
-  var string = "";
-  string += this.board_string.substr(0,4)+"\n";
-  string += this.board_string.substr(4,4)+"\n";
-  string += this.board_string.substr(8,4)+"\n";
-  string += this.board_string.substr(12,4)+"\n";
-  return string;
-};
-
 
 Game.prototype.move = function(direction){
   var updatedBoard = []
@@ -30,10 +20,10 @@ Game.prototype.move = function(direction){
   }
 
 Game.prototype.toRows = function(){
-  var row1 = this.board_string.substr(0,4).split("");
-  var row2 = this.board_string.substr(4,4).split("");
-  var row3 = this.board_string.substr(8,4).split("");
-  var row4 = this.board_string.substr(12,4).split("");
+  var row1 = this.board_string.slice(0,4);
+  var row2 = this.board_string.slice(4,8);
+  var row3 = this.board_string.slice(8,12);
+  var row4 = this.board_string.slice(12,16);
   return [row1, row2, row3, row4] // creates array of row arrays (still in string form atm)
 }
 
@@ -147,7 +137,8 @@ var randomBoard = function(){
         a[i] = a[j];
         a[j] = tmp;
     }
-    return a.join("");
+    debugger;
+    return a;
 };
 
 
