@@ -1,39 +1,38 @@
 var Game = function(){
-  this.board_string = randomBoard();
-  // this.renderBoard();
+  this.gameNumbers = randomBoard();
+  this.renderBoard();
 };
 
 Game.prototype.move = function(direction){
   var updatedBoard = []
 
   if (direction === "left"){
-      updatedBoard = leftUpMathy(compactLeftUp(this.toRows()));
-    } else if (direction === "up") { // for up
-      updatedBoard = columnsToFro(leftUpMathy(compactLeftUp(columnsToFro((this.toRows())))));
+      updatedBoard = leftUpMath(compactLeftUp(this.toRows()));
+    } else if (direction === "up") { 
+      updatedBoard = columnsToFro(leftUpMath(compactLeftUp(columnsToFro((this.toRows())))));
     } else if (direction === "right") {
-      updatedBoard = rightDownMathy(compactRightDown(this.toRows()));
+      updatedBoard = rightDownMath(compactRightDown(this.toRows()));
     } else {
-      updatedBoard = columnsToFro(rightDownMathy(compactRightDown(columnsToFro((this.toRows())))));
+      updatedBoard = columnsToFro(rightDownMath(compactRightDown(columnsToFro((this.toRows())))));
     };
-  this.board_string = insertRandom(updatedBoard);
+  this.gameNumbers = insertRandom(updatedBoard);
   this.renderBoard();
   }
 
 Game.prototype.toRows = function(){
-  var row1 = this.board_string.slice(0,4);
-  var row2 = this.board_string.slice(4,8);
-  var row3 = this.board_string.slice(8,12);
-  var row4 = this.board_string.slice(12,16);
+  var row1 = this.gameNumbers.slice(0,4);
+  var row2 = this.gameNumbers.slice(4,8);
+  var row3 = this.gameNumbers.slice(8,12);
+  var row4 = this.gameNumbers.slice(12,16);
   return [row1, row2, row3, row4] // creates array of row arrays (still in string form atm)
 }
 
 Game.prototype.renderBoard = function(){
-  var renderArray = this.board_string.split("");
-  for (var i = 0; i < renderArray.length; i++) {
-    $(".cell#"+i).text(renderArray[i]);
-    $(".cell#"+i).attr("data-number", renderArray[i])
+ 
+  for (var i = 0; i < this.gameNumbers.length; i++) {
+    $(".cell#"+i).text(this.gameNumbers[i]);
+    $(".cell#"+i).attr("data-number", this.gameNumbers[i])
   }
-
 }
 
 var insertRandom = function(updatedBoard){
@@ -46,7 +45,7 @@ var insertRandom = function(updatedBoard){
       inserted = true;
     };
   };
-  return boardArray.join('');
+  return boardArray;
 };
 
 var compactLeftUp = function(rowsOrColumns){
@@ -79,7 +78,7 @@ var compactRightDown = function(rowsOrColumns){
   return board;
 }
 
-var leftUpMathy = function(compactBoard){
+var leftUpMath = function(compactBoard){
   var mathifiedBoard = [];
   compactBoard.forEach(function(array){
     for( i = 0; i < 3; i++){
@@ -96,7 +95,7 @@ var leftUpMathy = function(compactBoard){
   return compactLeftUp(mathifiedBoard);
 };
 
-var rightDownMathy = function(compactBoard){
+var rightDownMath = function(compactBoard){
   var mathifiedBoard = [];
   compactBoard.forEach(function(array){
     for( i = 3; i > 0; i--){
@@ -138,5 +137,3 @@ var randomBoard = function(){
     }
     return a;
 };
-
-
