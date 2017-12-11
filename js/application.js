@@ -13,5 +13,8 @@ $(document).ready(function() {
 	});
 
 	
+	$(".restart").click(function() {
+		game = new Game();
+	});
 
 });

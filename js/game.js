@@ -1,5 +1,5 @@
-var Game = function(){
-  this.gameNumbers = randomBoard();
+var Game = function(testBoard){
+  this.gameNumbers = testBoard || randomBoard();
   this.renderBoard();
 };
 
