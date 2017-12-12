@@ -2,6 +2,12 @@ html {
 	background-color: lightgrey;
 }
 
+h1 {
+	font-size: 2.7em;
+	display: inline;
+	color: #595959; 
+}
+
 body {
 	width: 580px;
 	height: 580px;
@@ -10,6 +16,8 @@ body {
 }
 
 button {
+	margin-right: -20px;
+	float: right;
 	width: 200px;
 	height: 50px;
 	font-size: 1.6em;
@@ -19,6 +27,7 @@ button {
 	color: #dadada;
 }
 
+
 .game_board {
 	
 	width: 580px;
@@ -26,6 +35,7 @@ button {
 	padding: 10px;
 	margin: auto;
 	margin-top: 20px;
+	margin-bottom: 40px;
 	background-color: #7e7e7e;
 	border: 1px grey solid;
 	border-radius: 4px;
@@ -42,6 +52,10 @@ button {
 	vertical-align: center;
 	font-size: 110px;
 	font-family: "Helvetica";
+}
+
+.instructions {
+	margin: 20px 0px 20px 0px;
 }
 
 [data-number^="0"] {
