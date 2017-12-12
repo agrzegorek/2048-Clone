@@ -137,3 +137,18 @@ var randomBoard = function(){
     }
     return a;
 };
+
+var applyAnimation = function(cellList) {
+  cellList.forEach(function(cell){
+    if($(cell).data("number") != 0) {
+      $(cell).addClass("animated tada")
+    };
+    removeAnimation(cell);
+  });
+};
+
+var removeAnimation = function(cell) {
+  $(cell).delay(700).queue(function() {  // Wait for 1 second.
+            $(cell).removeClass("animated tada").dequeue();
+    });
+}

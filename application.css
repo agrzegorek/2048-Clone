@@ -54,11 +54,16 @@ button {
 	vertical-align: center;
 	font-size: 110px;
 	font-family: "Helvetica";
+	-webkit-animation-duration: 13s;
+	-moz-animation-duration: 13s;
+	-o-animation-duration: 13s;
+	animation-duration: 13s;
 }
 
 .instructions {
 	margin: 20px 0px 20px 0px;
 }
+
 
 [data-number^="0"] {
 	color: #a3a3a3;
