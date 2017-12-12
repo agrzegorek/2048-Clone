@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>256!</title>
+  <title>256</title>
 </head>
 <body>
+     
+     <span class="dashboard">
+          <h1>256: A 2048 Clone</h1>
+          <button>Restart</button>
+     </span>
 
- <div class="game_board">
-     <div class="cell row1" id="0" data-number=""></div>
-     <div class="cell row1" id="1" data-number=""></div>
-     <div class="cell row1" id="2" data-number=""></div>
-     <div class="cell row1" id="3" data-number=""></div>
-     <div class="cell row2" id="4" data-number=""></div>
-     <div class="cell row2" id="5" data-number=""></div>
-     <div class="cell row2" id="6" data-number=""></div>
-     <div class="cell row2" id="7" data-number=""></div>
-     <div class="cell row3" id="8" data-number=""></div>
-     <div class="cell row3" id="9" data-number=""></div>
-     <div class="cell row3" id="10" data-number=""></div>
-     <div class="cell row3" id="11" data-number=""></div>
-     <div class="cell row4" id="12" data-number=""></div>
-     <div class="cell row4" id="13" data-number=""></div>
-     <div class="cell row4" id="14" data-number=""></div>
-     <div class="cell row4" id="15" data-number=""></div>
- </div>
+     <div class="game_board">
+          <div class="cell row1" id="0" data-number=""></div>
+          <div class="cell row1" id="1" data-number=""></div>
+          <div class="cell row1" id="2" data-number=""></div>
+          <div class="cell row1" id="3" data-number=""></div>
+          <div class="cell row2" id="4" data-number=""></div>
+          <div class="cell row2" id="5" data-number=""></div>
+          <div class="cell row2" id="6" data-number=""></div>
+          <div class="cell row2" id="7" data-number=""></div>
+          <div class="cell row3" id="8" data-number=""></div>
+          <div class="cell row3" id="9" data-number=""></div>
+          <div class="cell row3" id="10" data-number=""></div>
+          <div class="cell row3" id="11" data-number=""></div>
+          <div class="cell row4" id="12" data-number=""></div>
+          <div class="cell row4" id="13" data-number=""></div>
+          <div class="cell row4" id="14" data-number=""></div>
+          <div class="cell row4" id="15" data-number=""></div>
+     </div>
+     <hr>
+     <div>
+          <p class="instructions">Use the <strong>arrow keys</strong> to move all the tiles in a direction. When two similar tiles meet, they combine. Get to 256 to win!</p> <hr>
+          <a href="https://github.com/agrzegorek/2048-Clone">Github Source</a>
+     </div>
 </body>
 
 
@@ -32,5 +42,6 @@
 <script src="js/game.js"></script>
 <script src="js/application.js"></script>
 <link rel="stylesheet" href="application.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 
 </html>
