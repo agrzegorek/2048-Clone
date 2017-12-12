@@ -54,16 +54,16 @@ button {
 	vertical-align: center;
 	font-size: 110px;
 	font-family: "Helvetica";
-	-webkit-animation-duration: 13s;
-	-moz-animation-duration: 13s;
-	-o-animation-duration: 13s;
-	animation-duration: 13s;
+	
 }
 
 .instructions {
 	margin: 20px 0px 20px 0px;
 }
 
+a {
+	color: #a3a3a3;
+}
 
 [data-number^="0"] {
 	color: #a3a3a3;
@@ -83,4 +83,22 @@ button {
 [data-number^="16"] {
 	color: #595959;
 	background-color: #58D68D;
+}
+[data-number^="32"] {
+	color: #595959;
+	background-color: #5DADE2;
+}
+[data-number^="64"] {
+	color: #595959;
+	background-color: #AF7AC5;
+}
+[data-number^="128"] {
+	font-size: 75px;
+	color: #595959;
+	background-color: #EC7063 ;
+}
+[data-number^="256"] {
+	font-size: 70px;
+	color: #a3a3a3;
+	background-color: #641E16;
 }

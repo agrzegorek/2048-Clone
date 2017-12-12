@@ -5,10 +5,7 @@ $(document).ready(function() {
 	$('body').keydown(function(e) {
 		if (e.keyCode == 38) {
 			game.move("up")};
-			applyAnimation(cells);
-			// if($(".cell").data("number") != 0) {
-			// 	$(".cell").addClass("animated bounceInUp")
-			// };
+			// applyAnimation(cells); doesn't work yet
 			
 		if (e.keyCode == 40) {
 			game.move("down")};

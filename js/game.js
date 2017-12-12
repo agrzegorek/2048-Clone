@@ -3,6 +3,8 @@ var Game = function(testBoard){
   this.renderBoard();
 };
 
+// test=[[0],[2],[4],[8],[16],[32],[64],[128],[256],[0],[0],[0],[0],[0],[0],[0]]
+
 Game.prototype.move = function(direction){
   var updatedBoard = []
 
