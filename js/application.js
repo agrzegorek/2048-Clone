@@ -12,9 +12,18 @@ $(document).ready(function() {
 			game.move("right")} ;
 	});
 
+	var button = $("button")
 	
-	$(".restart").click(function() {
+	button.click(function() {
 		game = new Game();
 	});
+	button.mouseover(function() {
+		button.addClass("animated jello")
+	});
+	button.mouseout(function() {
+		button.removeClass("animated jello")
+	})
+
+
 
 });

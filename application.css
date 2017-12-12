@@ -8,6 +8,10 @@ h1 {
 	color: #595959; 
 }
 
+p {
+	color: #595959; 
+}
+
 body {
 	width: 580px;
 	height: 580px;
@@ -21,15 +25,13 @@ button {
 	width: 200px;
 	height: 50px;
 	font-size: 1.6em;
-	background-color: #7e7e7e;
-	border: 1px grey solid;
+	background-color: #F9E79F ;
+	border: 1px #F9E79F solid;
 	border-radius: 4px;
-	color: #dadada;
+	color: #595959;
 }
 
-
 .game_board {
-	
 	width: 580px;
 	height: 580px;
 	padding: 10px;
