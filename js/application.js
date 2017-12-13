@@ -22,5 +22,6 @@ button.mouseover(function() {
 });
 button.mouseout(function() {
 	button.removeClass("animated jello")
-})
+});
  
+var port = process.env.PORT || 8000;
