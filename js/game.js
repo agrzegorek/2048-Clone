@@ -19,6 +19,8 @@ Game.prototype.move = function(direction){
     };
   this.gameNumbers = insertRandom(updatedBoard);
   this.renderBoard();
+  applyAnimation();
+  this.checkIfWon();
   }
 
 Game.prototype.toRows = function(){
@@ -35,7 +37,14 @@ Game.prototype.renderBoard = function(){
     $(".cell#"+i).text(this.gameNumbers[i]);
     $(".cell#"+i).attr("data-number", this.gameNumbers[i])
   }
-}
+};
+
+Game.prototype.checkIfWon = function(){
+  if (this.gameNumbers.includes("256")) {
+    alert("Congratulations! You Won!")
+  };
+
+};
 
 var insertRandom = function(updatedBoard){
   var boardArray = updatedBoard[0].concat(updatedBoard[1],updatedBoard[2],updatedBoard[3]);
@@ -140,12 +149,13 @@ var randomBoard = function(){
     return a;
 };
 
-var applyAnimation = function(cellList) {
-  cellList.forEach(function(cell){
-    if($(cell).data("number") != 0) {
+var applyAnimation = function() {
+  var cells = $(".game_board").children();
+  cells.toArray().forEach(function(cell){
+    if($(cell).text() != 0) {
       $(cell).addClass("animated tada")
     };
-    removeAnimation(cell);
+   removeAnimation(cell);
   });
 };
 
@@ -154,3 +164,4 @@ var removeAnimation = function(cell) {
             $(cell).removeClass("animated tada").dequeue();
     });
 }
+
