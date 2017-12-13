@@ -19,6 +19,7 @@ Game.prototype.move = function(direction){
     };
   this.gameNumbers = insertRandom(updatedBoard);
   this.renderBoard();
+  applyAnimation();
   }
 
 Game.prototype.toRows = function(){
@@ -140,12 +141,13 @@ var randomBoard = function(){
     return a;
 };
 
-var applyAnimation = function(cellList) {
-  cellList.forEach(function(cell){
-    if($(cell).data("number") != 0) {
+var applyAnimation = function() {
+  var cells = $(".game_board").children();
+  cells.toArray().forEach(function(cell){
+    if($(cell).text() != 0) {
       $(cell).addClass("animated tada")
     };
-    removeAnimation(cell);
+   removeAnimation(cell);
   });
 };
 
