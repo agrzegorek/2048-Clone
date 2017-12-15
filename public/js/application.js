@@ -11,18 +11,18 @@ $('body').keydown(function(e) {
 		game.move("right")} ;
 });
 
-$(document).on("swipeleft", function() {
+$(document).swipeleft(function() {
 	game.move("left")
 });
-$(document).on("swiperight", function() {
+$(document).swiperight(function() {
 	game.move("right")
 });
-$(document).on("swipeup", function() {
+$(document).swipeup(function() {
 	game.move("up")
 });
-$(document).on("swipedown", function() {
+$(document).swipedown(function() {
 	game.move("down")
-});
+});	
 
 var button = $("button")
 
