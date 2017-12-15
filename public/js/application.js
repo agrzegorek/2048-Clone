@@ -11,19 +11,6 @@ $('body').keydown(function(e) {
 		game.move("right")} ;
 });
 
-$(document).swipeleft(function() {
-	game.move("left")
-});
-$(document).swiperight(function() {
-	game.move("right")
-});
-$(document).swipeup(function() {
-	game.move("up")
-});
-$(document).swipedown(function() {
-	game.move("down")
-});	
-
 var button = $("button")
 
 button.click(function() {
