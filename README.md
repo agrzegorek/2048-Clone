@@ -2,5 +2,5 @@
 
 Site link: https://ag-256.herokuapp.com/
 
-Run on Sinatra, the app uses JavaScript and jQuery to create a clone of the popular game: 2048. 
+Run on Sinatra, the app uses JavaScript and jQuery to create a clone of the popular game: 2048. Hosted on Heroku.
 
