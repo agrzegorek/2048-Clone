@@ -1,0 +1,105 @@
+html {
+	background-color: lightgrey;
+	font-family: "Helvetica";
+}
+
+h1 {
+	font-size: 2.7em;
+	display: inline;
+	color: #595959; 
+}
+
+p {
+	color: #595959; 
+}
+
+body {
+	width: 580px;
+	height: 580px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+button {
+	margin-right: -20px;
+	float: right;
+	width: 200px;
+	height: 50px;
+	font-size: 1.6em;
+	background-color: #F9E79F ;
+	border: 1px #F9E79F solid;
+	border-radius: 4px;
+	color: #595959;
+}
+
+.game_board {
+	width: 580px;
+	height: 580px;
+	padding: 10px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	background-color: #7e7e7e;
+	border: 1px grey solid;
+	border-radius: 4px;
+}
+
+.cell {
+	margin: 10px;
+	float: left;
+	width: 125px;
+	height: 125px;
+	border-radius: 4px;
+	background-color: #a3a3a3;
+	text-align: center;
+	vertical-align: center;
+	font-size: 110px;
+	font-family: "Helvetica";
+	
+}
+
+.instructions {
+	margin: 20px 0px 20px 0px;
+}
+
+a {
+	color: #a3a3a3;
+}
+
+[data-number^="0"] {
+	color: #a3a3a3;
+}
+[data-number^="2"] {
+	color: #595959;
+	background-color: #dadada;
+}
+[data-number^="4"] {
+	color: #595959;
+	background-color: #EDBB99;
+}
+[data-number^="8"] {
+	color: #595959;
+	background-color: #F7DC6F;
+}
+[data-number^="16"] {
+	color: #595959;
+	background-color: #58D68D;
+}
+[data-number^="32"] {
+	color: #595959;
+	background-color: #5DADE2;
+}
+[data-number^="64"] {
+	color: #595959;
+	background-color: #AF7AC5;
+}
+[data-number^="128"] {
+	font-size: 75px;
+	color: #595959;
+	background-color: #EC7063 ;
+}
+[data-number^="256"] {
+	font-size: 70px;
+	color: #a3a3a3;
+	background-color: #641E16;
+}
