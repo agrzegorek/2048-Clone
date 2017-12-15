@@ -11,6 +11,19 @@ $('body').keydown(function(e) {
 		game.move("right")} ;
 });
 
+$(document).on("swipeleft", function() {
+	game.move("left")
+});
+$(document).on("swiperight", function() {
+	game.move("right")
+});
+$(document).on("swipeup", function() {
+	game.move("up")
+});
+$(document).on("swipedown", function() {
+	game.move("down")
+});
+
 var button = $("button")
 
 button.click(function() {
